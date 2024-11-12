@@ -1,0 +1,184 @@
+$font: 'Verdana';
+$font-mono: 'Roboto Mono';
+$font-menu: sans-serif;
+
+:root {
+
+    --nav-height: 40rem;
+    --grid-width: 10;
+
+    --color-text: #d8dee9;
+    --color-text-solid: #eceff4;
+
+
+    --color-accent: #6db5fd;
+    --color-error: #bf616a;
+    --color-warning: #ebcb8b;
+    --color-success: #a3be8c;
+
+    --color-context-menu: #eceff4;
+    --color-context-menu-text: #3b4252;
+
+
+    --line-width: 1rem;
+
+    --alpha-scrollbar: 0.25;
+    --alpha-scrollbar-on: 0.75;
+    --scrollbar-size: 12px;
+
+    --color-grid: rgba(0,0,0, 0.1);
+    --color-notification: #{rgba(black, 0.8)};
+    --color-widget: var(--color-accent);
+
+}
+
+ 
+.xtouchbackground {
+background-image: url('./images/wing_back.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 1024px 768px ;
+opacity: 1.0;
+position: absolute;
+
+}
+
+.rotary_btn{
+	position: absolute;
+	opacity: 1.0;
+	border: none;
+position: absolute;
+
+}
+
+.rotary{
+	position: absolute;
+	opacity: 1.0;
+	border: none;
+position: absolute;
+
+}
+
+.text-input{
+	font-family: 'Verdana';
+	position: absolute;
+	opacity: 1.0;
+	border: none;
+position: absolute;
+
+}
+	
+.fader {
+	border: none;
+--alpha-fill-on: none;
+--alpha-fill-off: none;
+--alpha-stroke: none;
+--color-text: none;
+--color-widget: none;
+--color-fill: none;
+--line-width: none;
+//background-image: url('./images/strip_dark.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 160px 650px ;
+position: absolute;	
+}
+
+.faderknob {
+	border: none;
+left: 0;
+right: 0;
+height: 66px;
+background-image: url('./images/faderknob.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 40px 66px ;
+position: absolute;	
+z-index: 1;
+pointer-events: none;
+}
+
+
+.button {
+border: none;
+--alpha-fill-on: none;
+//--alpha-fill-off: none;
+//--alpha-stroke: none;
+--color-text: none;
+--color-widget: none;
+--color-fill: none;
+--line-width: none;
+background-image: url('./images/button_off.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 64px 48px ;
+position: absolute;		
+}
+
+
+.button.on {
+background-image: url('./images/button_on.png');	
+}
+
+.buttongo {
+border: none;
+--alpha-fill-on: none;
+//--alpha-fill-off: none;
+//--alpha-stroke: none;
+--color-text: none;
+--color-widget: none;
+--color-fill: none;
+--line-width: none;
+background-image: url('./images/buttongo_off.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 64px 48px ;
+position: absolute;		
+}
+
+
+.buttongo.on {
+background-image: url('./images/buttongo_on.png');	
+}
+
+.buttonpause {
+border: none;
+--alpha-fill-on: none;
+//--alpha-fill-off: none;
+//--alpha-stroke: none;
+--color-text: none;
+--color-widget: none;
+--color-fill: none;
+--line-width: none;
+background-image: url('./images/buttonpause_off.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 64px 48px ;
+position: absolute;		
+}
+
+
+.buttonpause.on {
+background-image: url('./images/buttonpause_on.png');	
+}
+
+.buttonsel {
+border: none;
+--alpha-fill-on: none;
+//--alpha-fill-off: none;
+//--alpha-stroke: none;
+--color-text: none;
+--color-widget: none;
+--color-fill: none;
+--line-width: none;
+background-image: url('./images/buttonsel_off.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 64px 33px ;
+position: absolute;		
+}
+
+
+.buttonsel.on {
+background-image: url('./images/buttonsel_on.png');	
+}

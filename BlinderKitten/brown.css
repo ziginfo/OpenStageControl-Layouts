@@ -1,0 +1,38 @@
+:root{
+--nav-height: 40rem;
+--grid-width: 10;
+--color-background: #201515;
+--color-ui-foreground: #434242;
+--color-ui-background: #2d1f1e;
+--color-ui-button: #606060;
+--color-accent: #ba6616
+--color-text: #ded2c6;
+--color-text-solid: #ded2c6;
+--color-accent: #9b5209;
+--color-error: #bf616a;
+--color-warning: #ebcb8b;
+--color-success: #a3be8c;
+--color-context-menu: #eceff4;
+--color-context-menu-text: #3b4252;
+--line-width: 1rem;
+--alpha-scrollbar: 0.25;
+--alpha-scrollbar-on: 0.75;
+--scrollbar-size: 12rem;
+--color-grid: rgba(0,0,0, 0.1);
+--color-notification: rgba(0,0,0,0.8);
+--color-widget: var(--color-accent)
+}
+
+
+.enc1 {--color-widget:#dc8530}
+
+.enc2 {--color-widget:#c2690f}
+
+.fad1 {--color-widget:#dbd7bc}
+
+.butt1 {--color-widget:#bb9415}
+
+.butt2 {--color-widget:#a741e4}
+
+.butt3 {--color-widget:#3f3525}
+

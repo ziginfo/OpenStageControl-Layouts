@@ -3,12 +3,12 @@
 --grid-width: 10;
 --color-background: #201515;
 --color-ui-foreground: #434242;
---color-ui-background: #2d1f1e;
---color-ui-button: #606060;
---color-accent: #ba6616
+--color-ui-background: #2f2a2a;
+--color-ui-button: #5a5858;
+--color-accent: #8a4d0f;
+--color-accent2: #443b31; 
 --color-text: #ded2c6;
 --color-text-solid: #ded2c6;
---color-accent: #9b5209;
 --color-error: #bf616a;
 --color-warning: #ebcb8b;
 --color-success: #a3be8c;

@@ -145,7 +145,7 @@
                 "target": [],
                 "preArgs": "",
                 "value": "",
-                "address": "/master/gain",
+                "address": "/mix16showcue/setmaster",
                 "doubleTap": false,
                 "width": "100%",
                 "default": 100,

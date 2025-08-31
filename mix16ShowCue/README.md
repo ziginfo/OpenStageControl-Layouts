@@ -1,5 +1,6 @@
 ## Remote Layout for MiX16 ShowCue and Open Stage Control
-This is a template for the MiX16 App : [ShowCuePro](https://mix16showcue.com/) for OpenStageControl
+This is a template for the MiX16 App : [ShowCuePro](https://mix16showcue.com/) for OpenStageControl...
+
 ---
 OpenStageControl can be downloaded on their [Website](https://openstagecontrol.ammd.net/)...it's Open-Source and free software  
 

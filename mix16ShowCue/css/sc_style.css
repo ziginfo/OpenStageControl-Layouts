@@ -1,0 +1,94 @@
+$font: 'Verdana';
+$font-mono: 'Roboto Mono';
+$font-menu: sans-serif;
+
+
+:root {
+
+    --nav-height: 40rem;
+	--grid-width: 10;
+	--color-background: #1f242a;
+	--color-ui-foreground: hsl(219, 14%, 23%);
+	--color-ui-background: hsl(217, 14%, 19%);
+	--color-ui-button: #3b4252;--color-accent: #6db5fd;
+	--color-text: #d8dee9;
+	--color-text-solid: #eceff4;
+	--color-accent: #6db5fd;
+	--color-error: #bf616a;
+	--color-warning: #ebcb8b;
+	--color-success: #a3be8c;
+	--color-context-menu: #eceff4;
+	--color-context-menu-text: #3b4252;
+	--line-width: 5rem;
+	--alpha-scrollbar: 0.25;
+	--alpha-scrollbar-on: 0.75;
+	--scrollbar-size: 12rem;
+	--color-grid: rgba(0,0,0, 0.1);
+	--color-notification: rgba(0,0,0,0.8);
+	--color-widget: var(--color-accent)
+
+}
+
+.red { 
+background-color: red;
+}
+
+.orange {
+background-color: orange;
+}
+
+.blue {
+background-color: blue;
+}
+
+.cyan {
+background-color: cyan;
+}
+
+.black {
+background-color: black;
+}
+
+.brown {
+background-color: #2c2224;
+}
+
+.transparent {
+background:transparent;
+}
+
+.rotary_btn{
+	position: absolute;
+	opacity: 1.0;
+	border: none;
+position: absolute;
+
+}
+
+.rotary{
+	position: absolute;
+	opacity: 1.0;
+	border: none;
+position: absolute;
+
+}
+
+.label-input{
+	font-family: 'LCD-7';
+	position: absolute;
+	opacity: 1.0;
+	border: none;
+position: absolute;
+}
+
+.label{
+	font-family: 'Times';
+	position: absolute;
+	background-color: #2b2627;
+	color : #d1afcd;
+	text-align: end;
+//	text-align: right;
+	opacity: 1;
+	border: none;
+position: absolute;
+}	

@@ -1,0 +1,31 @@
+:root{
+	--nav-height: 40rem;
+	--grid-width: 10;
+	--color-background: #21252b;
+	--color-ui-foreground: hsl(219, 14%, 23%);
+	--color-ui-background: hsl(217, 14%, 19%);
+	--color-ui-button: #3b4252;--color-accent: #6db5fd;
+	--color-text: #d8dee9;
+	--color-text-solid: #eceff4;
+	--color-accent: #6db5fd;
+	--color-error: #bf616a;
+	--color-warning: #ebcb8b;
+	--color-success: #a3be8c;
+	--color-context-menu: #eceff4;
+	--color-context-menu-text: #3b4252;
+	--line-width: 1rem;
+	--alpha-scrollbar: 0.25;
+	--alpha-scrollbar-on: 0.75;
+	--scrollbar-size: 12rem;
+	--color-grid: rgba(0,0,0, 0.1);
+	--color-notification: rgba(0,0,0,0.8);
+	--color-widget: var(--color-accent)
+		}
+	
+:root{
+	--color-background: #2e3440;
+	--color-ui-foreground: #434c5e;
+	--color-ui-background: #3b4252;
+	--color-ui-button: #4c566a;
+	--color-accent: #88c0d0
+		}

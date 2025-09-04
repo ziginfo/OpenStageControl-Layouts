@@ -1,0 +1,108 @@
+// Do whatever you want
+// initialize variables
+// declare functions
+// listen to app events
+// load modules
+// etc
+
+const cueAddresses = ['/mix16showcue/cue', '/mix16showcue/nextcue/name', '/mix16showcue/playingcue/name'];
+const cue_names=[]
+var cue_ids=[]
+const cue_numbs=[]
+
+
+module.exports = {
+
+    init: function(){
+        // this will be executed once when the osc server starts after
+        // connections are set up
+        // it is called for the main module only
+    //    send ("192.168.50.49:7200" , "/mix16showcue/info/full")
+    },
+
+    stop: function(){
+        // this will be executed once when the osc server stops
+        // it is called for the main module only
+    },
+
+    reload: function(){
+        // this will be executed after the custom module is reloaded
+        // it is called for the main module only
+    },
+
+    oscInFilter:function(data){
+        // Filter incoming osc messages
+
+        var {address, args, host, port} = data
+        
+
+
+        if (data.address == '/mix16showcue/cue') {            
+          //  	var cue_ids=[]
+          		const maxnumber = data.args[0].value
+      //      	cue_ids.push(data.args[0])            	
+      //      	cues_count = cue_ids.length            	
+     //       	cue_ids.length = 0
+            	            	
+         		cue_numbs.push(data.args[1])                       	
+           		cue_names.push(data.args[2])
+           		
+            var cue_id = data.args[0]
+            receive('/cuemax', cue_id)
+            receive('/cuemax_var', maxnumber)
+            receive('/getname', cue_names[0])
+            
+            
+            var cue_vol = data.args[3]
+            var cue_play = data.args[4]
+       //     var cues_count = cue_ids.length
+       
+       		
+//		 insert Cue-names and -numbers              
+         	for (n=0; n<maxnumber; n++){
+         	no=n+1
+         	receive('/cueno_'+no, cue_numbs[n])
+         	receive('/cuetrigvar_'+no, cue_numbs[n])
+         	receive('/cuename_'+no, cue_names[n])
+         	receive('/cuelabel_'+no, cue_names[n])
+         	receive('/cuetrig_'+no, cue_names[n])
+         	}                                      
+            
+    //     	receive('/cueid_2', cue_no)           
+          
+         
+         }       
+            
+            // empty return = bypass original message 
+            //  return
+       
+
+        // do what you want
+
+        // address = string
+        // args = array of {value, type} objects
+        // host = string
+        // port = integer
+
+        // return data if you want the message to be processed
+        return data
+
+    },
+
+    oscOutFilter:function(data){
+        // Filter outgoing osc messages
+
+        var {address, args, host, port, clientId} = data
+
+        // same as oscInFilter
+
+        // return data if you want the message to be and sent
+        return {address, args, host, port}
+    },
+
+    unload: function(){
+        // this will be executed before the custom module is reloaded
+        // it is called for all modules, including other loaded modules
+    },
+
+}

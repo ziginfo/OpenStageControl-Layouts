@@ -62,10 +62,11 @@ module.exports = {
          	for (n=0; n<maxnumber; n++){
          	no=n+1
          	receive('/cueno_'+no, cue_numbs[n])
-         	receive('/cuetrigvar_'+no, cue_numbs[n])
          	receive('/cuename_'+no, cue_names[n])
          	receive('/cuelabel_'+no, cue_names[n])
          	receive('/cuetrig_'+no, cue_names[n])
+         	receive('/cuetrigvar_'+no, cue_numbs[n])
+         	receive('/cuetrigname_'+no, cue_names[n])
          	}                                      
             
     //     	receive('/cueid_2', cue_no)           

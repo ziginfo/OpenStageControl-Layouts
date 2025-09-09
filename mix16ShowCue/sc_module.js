@@ -7,7 +7,7 @@
 
 const cueAddresses = ['/mix16showcue/cue', '/mix16showcue/nextcue/name', '/mix16showcue/playingcue/name'];
 const cue_names=[]
-var cue_ids=[]
+const cue_ids=[]
 const cue_numbs=[]
 
 
@@ -38,28 +38,25 @@ module.exports = {
 
 
         if (data.address == '/mix16showcue/cue') {            
-          //  	var cue_ids=[]
-          		const maxnumber = data.args[0].value
-      //      	cue_ids.push(data.args[0])            	
-      //      	cues_count = cue_ids.length            	
-     //       	cue_ids.length = 0
-            	            	
-         		cue_numbs.push(data.args[1])                       	
-           		cue_names.push(data.args[2])
+          		            	
+            	cue_ids.push(data.args[0].value)             	
+         		cue_numbs.push(data.args[1].value)                       	
+           		cue_names.push(data.args[2].value)
+           	
+           	const maxid = Math.max.apply(Math, cue_ids);
            		
             var cue_id = data.args[0]
-            receive('/cuemax', cue_id)
-            receive('/cuemax_var', maxnumber)
-            receive('/getname', cue_names[0])
+            receive('/cuemax', maxid)
+            receive('/cuemax_var', maxid)
+//            receive('/getname', cue_names[0])
             
             
-            var cue_vol = data.args[3]
-            var cue_play = data.args[4]
-       //     var cues_count = cue_ids.length
+            var cue_vol = data.args[3].value
+            var cue_play = data.args[4].value
        
        		
 //		 insert Cue-names and -numbers              
-         	for (n=0; n<maxnumber; n++){
+         	for (n=0; n<maxid; n++){
          	no=n+1
          	receive('/cueno_'+no, cue_numbs[n])
          	receive('/cuename_'+no, cue_names[n])

@@ -17,7 +17,6 @@ module.exports = {
         // this will be executed once when the osc server starts after
         // connections are set up
         // it is called for the main module only
-    //    send ("192.168.50.49:7200" , "/mix16showcue/info/full")
     },
 
     stop: function(){
@@ -34,8 +33,6 @@ module.exports = {
         // Filter incoming osc messages
 
         var {address, args, host, port} = data
-        
-
 
         if (data.address == '/mix16showcue/cue') {            
           		            	
@@ -48,12 +45,9 @@ module.exports = {
             var cue_id = data.args[0]
             receive('/cuemax', maxid)
             receive('/cuemax_var', maxid)
-//            receive('/getname', cue_names[0])
-            
-            
+                        
             var cue_vol = data.args[3].value
-            var cue_play = data.args[4].value
-       
+            var cue_play = data.args[4].value       
        		
 //		 insert Cue-names and -numbers              
          	for (n=0; n<maxid; n++){
@@ -69,7 +63,9 @@ module.exports = {
     //     	receive('/cueid_2', cue_no)           
           
          
-         }       
+         }  
+         
+         
             
             // empty return = bypass original message 
             //  return
@@ -91,9 +87,23 @@ module.exports = {
         // Filter outgoing osc messages
 
         var {address, args, host, port, clientId} = data
+        
+        if (data.address == '/clearall') {
+        	var count = data.args[0].value
+				count = parseInt(count)
 
-        // same as oscInFilter
-
+//		 clear Cue-names and -numbers				        
+        	for (n=0; n<count; n++){
+         	no=n+1
+         	receive('/cueno_'+no, "")
+         	receive('/cuename_'+no, "")
+         	receive('/cuelabel_'+no, "")
+         	receive('/cuetrig_'+no, "")
+         	receive('/cuetrigvar_'+no, "")
+         	receive('/cuetrigname_'+no, "")
+         	}
+         	  
+         }     
         // return data if you want the message to be and sent
         return {address, args, host, port}
     },

@@ -5,7 +5,7 @@ OpenStageControl can be downloaded on their [Website](https://openstagecontrol.a
 
 ---
 OSC-Control must be activated in the Show-Cue parameters-setup !   
-The OSC INPUT and OUTPUT Ports must be set correctly in both : OpenstageControl and MiX16 Show Cue !  If both are on the same computer the IP-Address should be : 127.0.0.1 ...   
+The IP Addresses and the OSC INPUT and OUTPUT Ports must be set correctly in both : OpenstageControl and MiX16 Show Cue !  If both are on the same computer the IP-Address should be : 127.0.0.1 ...   
 Please use and load also the JS file "sc_module.js" as it adds some interesting features (not available if it is not loaded).    
 Important : After changing a current MiX-ShowControl-Project, you must stop and restart the OpenStageControl Server ! (Otherwise the "Sync-Function" will not work properly !) 
 

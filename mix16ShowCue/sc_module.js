@@ -47,7 +47,7 @@ module.exports = {
            	
            	var maxid = Math.max.apply(Math, cue_ids)
            		
-//            var cue_id = data.args[0]
+
             receive('/cuemax', maxid)
             receive('/cuemax_var', maxid)
                         
@@ -57,6 +57,7 @@ module.exports = {
 //		 insert Cue-names and -numbers              
          	for (n=0; n<maxid; n++){
          	no=n+1
+//         	receive('/cueid_'+no, no)
          	receive('/cueno_'+no, cue_numbs[n])
          	receive('/cuename_'+no, cue_names[n])
          	receive('/cuelabel_'+no, cue_names[n])
@@ -67,8 +68,7 @@ module.exports = {
          	}                                               
          }
                         
-   			if (data.address == '/mix16showcue/sidebarcue') {            
-          	          	         		
+   			if (data.address == '/mix16showcue/sidebarcue') {                      	          	         		
           		sb_ids.push(data.args[0].value)             	         		                       	
           		sb_names.push(data.args[1])
           		var sbmaxid = Math.max.apply(Math, sb_ids)          		
@@ -84,6 +84,19 @@ module.exports = {
          	receive('/sbname_'+o,sb_names[i])
          	}                     
           }
+          
+          
+/*          
+          	if (data.address == '/mix16showcue/playingcue/number') {                      	          	         		             	         		                       	
+          		var playno = data.args[0].value } 
+          		        		         		        		
+          		for (l=1; l<60; l++)
+          		if (playno==l)
+            	{receive('/cueled_'+l, 1 )	}
+            	else
+            	{receive('/cueled_'+l, 0 )}            	         	                
+          
+*/
 
             // empty return = bypass original message 
             //  return

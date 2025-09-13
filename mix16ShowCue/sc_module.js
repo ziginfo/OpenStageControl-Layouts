@@ -119,7 +119,9 @@ module.exports = {
         if (data.address == '/clearall') {
         	var count = data.args[0].value
 				count = parseInt(count)
-
+			
+			receive('/notes_nextcue', "")    
+			
 //		 clear Cue-names and -numbers				        
         	for (n=0; n<count; n++){
          	no=n+1
@@ -137,13 +139,16 @@ module.exports = {
 				cue_numbs.pop()		}
 				while( cue_names.length > 0){
 				cue_names.pop()		}
+				while( cue_notes.length > 0){
+				cue_notes.pop()		}
 				while( sb_names.length > 0){
 				sb_names.pop()		}
 				while( sb_ids.length > 0){
 				sb_ids.pop()		}								
          	maxid = 0
          	receive('/cuemax', maxid)
-            receive('/cuemax_var', maxid)         	  
+            receive('/cuemax_var', maxid)
+                 	  
          } 
          
          if (data.address == '/clearsb') {

@@ -11,7 +11,7 @@ Important : After changing a current MiX-ShowControl-Project, you must stop and 
 For using the layout with another device (tablette, iPad etc), the default port for the TCP client is 8080 (but this can be changed in the OpenStageControl Setup, if you want).   
 
 Actual version for this O-S-C layout is v2.3 and actual version for MiX ShowCue is v4.6    
-If you update the layout from an older version, please download and replace also the "sc_module.js" as new functions may have been added !     
+If you update the layout from an older version, please download and replace also the "sc_module.js" file, as new functions may have been added !     
 
 ---
 I sometimes update some of these Layouts, so  it may be worth to [come back here](https://github.com/ziginfo/OpenStageControl-Layouts/edit/main/mix16ShowCue) from time to time, to see if there are any updates (usually notified in the Readme-Files).     

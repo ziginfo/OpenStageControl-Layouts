@@ -128,6 +128,7 @@ module.exports = {
          	receive('/cuename_'+no, "")
          	receive('/sbname_'+no, "")
          	receive('/cuelabel_'+no, "")
+         	receive('/cuenote_'+no, "")
          	receive('/cuetrig_'+no, "")
          	receive('/cuetrigvar_'+no, "")
          	receive('/cuetrigname_'+no, "")

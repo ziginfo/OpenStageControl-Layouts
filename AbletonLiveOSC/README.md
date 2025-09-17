@@ -12,7 +12,7 @@ This OpenStageControl Layout includes also a virtual Launchpad which communicate
 See also the "pics" images for details.
 
 ---
-#### The actual Version of my layout it is  v1.2    
+#### The actual Version of my layout is  v1.2    
 But it is still "work-in-progress" and I'll try to get it better and richer in the future... some features are still missing or "in work" !  
 
 Some basic css-rules are written directly into the layout for color rendering etc... but consider that it'll be better to load a specific css-file (the live.css is what I wrote and use for me !!)   

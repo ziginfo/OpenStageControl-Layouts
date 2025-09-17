@@ -15,7 +15,7 @@ See also the "pics" images for details.
 #### The actual Version of my layout is  v1.2    
 But it is still "work-in-progress" and I'll try to get it better and richer in the future... some features are still missing or "in work" !  
 
-Some basic css-rules are written directly into the layout for color rendering etc... but consider that it'll be better to load a specific css-file (the **'live.css'** file is what I wrote and use for me !!)   
+Some basic css-rules are written directly into the layout for color rendering etc... but consider that it'll be better to load a specific css-file (the **live.css** file is what I wrote and use for me !!)   
    
 Scenes can  be played from the OSC-LaunchPad with the new function "Fire Scenes" and also from the Virtual-MIDI-Launchpad !    
 
@@ -31,7 +31,7 @@ To get MIDI to work correctly, you must use some Virtual-MIDI-Interface ( for ex
 For many Feedbacks there is a "start_listen" feature which tells Live to send Feedback as soon as there are any changes in the session (for example : Names, Volumes, Mutes, Solo etc etc). Most of these "start_listens" are activated automatically, when the O-S-C-Layout goes online. Others may be activated manually with the "Sync" Button. (Some are not yet available.... as there are so many to include....)   
 
 ---
-I sometimes update some of these Layouts, so  it may be worth to [come back here](https://github.com/ziginfo/OpenStageControl-Layouts/tree/main/AbletonLiveOSC) from time to time, to see if there are any updates (usually notified in the Readme-Files).     
+I will update this Layout in the future and add more features to it, so  it may be worth to [come back here](https://github.com/ziginfo/OpenStageControl-Layouts/tree/main/AbletonLiveOSC) from time to time, to see if there are any updates (usually notified in the Readme-Files).     
 Please contact me if you have any suggestions, demands or requests and any help is always welcome !!   
 Have Fun ...  
 

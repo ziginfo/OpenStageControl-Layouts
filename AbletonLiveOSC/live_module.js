@@ -38,26 +38,27 @@ module.exports = {
         var {address, args, host, port} = data
 
         if (address == '/live/track/get/volume') {
-          address = '/live/track/set/volume' }
+          	address = '/live/track/set/volume' }
         if (address == '/live/track/get/send') {
-          address = '/live/track/set/send' }          
+          	address = '/live/track/set/send' }          
         if (address == '/live/track/get/mute') {
         	address = '/live/track/set/mute'
         	if (data.args[1].value== true) {data.args[1].value= 1}
         	else {data.args[1].value= 0}   }          
         if (address == '/live/track/get/solo') {
-          address = '/live/track/set/solo' 
+          	address = '/live/track/set/solo' 
           if (data.args[1].value== true) {data.args[1].value= 1}
         	else {data.args[1].value= 0}  }
-        if (address == '/live/track/get/arm') {
-          address = '/live/track/set/arm' 
+        if (address == '/live/track/get/arm') {       
+          	address = '/live/track/set/arm' 
           if (data.args[1].value== true) {data.args[1].value= 1}
-        	else {data.args[1].value= 0}  }        	
+        	else {data.args[1].value= 0}  }
+        	       	
         if (address == '/live/song/get/loop') {
-          address = '/live/song/set/loop'}
+          	address = '/live/song/set/loop'}
           
           if (address == '/live/clip/get/name') {
-          address = '/live/clip/fire'}
+          	address = '/live/clip/fire'}
           
         return {address, args, host, port}
 

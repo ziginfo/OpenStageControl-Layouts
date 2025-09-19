@@ -1,4 +1,4 @@
-$font: 'Roboto';
+$font: 'Verdana';
 $font-mono: 'Roboto Mono';
 $font-menu: sans-serif;
 
@@ -24,8 +24,7 @@ $font-menu: sans-serif;
 	--scrollbar-size: 12rem;
 	--color-grid: rgba(0,0,0, 0.1);
 	--color-notification: rgba(0,0,0,0.8);
-//--color-widget: var(--color-accent)
-
+ 	--color-widget: var(--color-accent)
 }
 
 .red { 
@@ -84,6 +83,8 @@ background:transparent;}
 .butt4 {--color-widget:#bb9415;
 		--color-stroke: #4e6e55;
 		--alpha-stroke: 1;}
+.butt5 {--color-widget:#504646;}
+		#909274
 
 .enc1 {
 border: 3;
@@ -125,16 +126,12 @@ border: none;
 	position: absolute;
 	opacity: 1.0;
 	border: none;
-
-
 }
 
 .rotary{
 	position: absolute;
 	opacity: 1.0;
 	border: none;
-
-
 }
 
 .encoder {
@@ -168,21 +165,6 @@ text-align: end;
 	border: none;
 position: absolute;
 }	
-
-
-
-.fader2 {
-	border: none;
---alpha-fill-on: none;
-//--alpha-fill-off: none;
-//--alpha-stroke: none;
---color-text: none;
---color-widget: none;
---color-fill: none;
---line-width: none;
-
-}
-
 
 .button {
 border: none;

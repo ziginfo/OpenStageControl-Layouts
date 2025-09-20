@@ -4,7 +4,7 @@ $font-menu: sans-serif;
 
 :root {
 
-    --nav-height: 40rem;
+    --nav-height: 20;
 	--grid-width: 10;
 	--color-background: #000000;
 	--color-ui-foreground: #0d0d0d;
@@ -75,7 +75,8 @@ background:transparent;}
 .fad2 {--color-widget:#dbd7bc;}
 .fad3 {--color-widget:#7891fa;}
 
-.butt1 {--color-widget:#c09c2a;}
+.butt1 {--color-widget:#c09c2a;
+		--color-text-on: #0f0f0f;}
 .butt2 {--color-widget:#298bff;
 		--color-stroke: #a662b0;
 		--alpha-stroke: 1;}
@@ -84,8 +85,48 @@ background:transparent;}
 		--color-stroke: #4e6e55;
 		--alpha-stroke: 1;}
 .butt5 {--color-widget:#504646;}
-		#909274
 
+.gradient { 
+background: radial-gradient(circle, rgba(255,255,255, 0.2), transparent);
+--color-widget:#fff;}
+
+.gradient1 { 
+background: radial-gradient(circle, rgba(255,255,255, 0.4), transparent);
+--color-widget:#e7f3ff;
+--color-text: #6c7059;
+--alpha-fill-off: 0.4;
+--alpha-fill-on: 0.55;}
+		
+.label1  {
+--color-widget:#3f3525;
+--color-stroke: #614f3e;
+--color-fill: #6c563d;
+--alpha-fill-off: 0.4;
+--alpha-fill-on: 1;
+--alpha-stroke: 1;
+--color-text: #fee8a0;	
+}
+
+.label2  {
+--color-widget:#bf7921;
+--color-stroke: #614f3e;
+--alpha-fill-off: 0.3;
+--alpha-fill-on: 1;
+--alpha-stroke: 1;
+--color-text: #fee8a0;	
+}
+
+.label3  {
+--color-widget:#3f3525;
+--color-stroke: #614f3e;
+--color-fill: #766e64;
+--alpha-fill-off: 0.4;
+--alpha-fill-on: 0.8;
+--alpha-stroke: 0.7;
+--color-text: #c5c8ff;
+--color-text-on: #fcfcae;	
+}
+		
 .enc1 {
 border: 3;
 --alpha-fill-on: 1;

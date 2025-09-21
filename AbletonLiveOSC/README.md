@@ -12,7 +12,8 @@ This OpenStageControl Layout includes also a virtual Launchpad which communicate
 See also the "pics" images for details.
 
 ---
-#### The actual Version of my layout is  v1.7   
+#### The actual Version of my layout is  v1.8   
+Added Color-Feedback and some other features...   
 Added two new Tabs for Keyboard and DrumPad and some new Feedback-Features for Clips and Scenes ...     
 But it is still "work-in-progress" and I'll try to get it better and richer in the future... some features are still missing or "in work" !  
 

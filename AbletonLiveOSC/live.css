@@ -79,11 +79,16 @@ background:transparent;}
 		--color-text-on: #0f0f0f;}
 .butt2 {--color-widget:#298bff;
 		--color-stroke: #a662b0;
+		--color-text-on: #ffff00;
 		--alpha-stroke: 1;}
-.butt3 {--color-widget:#3f3525;}
-.butt4 {--color-widget:#bb9415;
+.butt3 {--color-widget:#3f3525;
+		font-size:16px;}
+.butt4 {--color-text:#d5d0b0;
+		--color-widget:#bb9415;
 		--color-stroke: #4e6e55;
-		--alpha-stroke: 1;}
+		--alpha-fill-off: 0.4;
+		--alpha-stroke:0.6!important;
+		--border-radius: 3;}
 .butt5 {--color-widget:#504646;}
 
 .gradient { 
@@ -95,7 +100,7 @@ background: radial-gradient(circle, rgba(255,255,255, 0.4), transparent);
 --color-widget:#e7f3ff;
 --color-text: #6c7059;
 --alpha-fill-off: 0.4;
---alpha-fill-on: 0.55;}
+--alpha-fill-on: 0.55;	}
 		
 .label1  {
 --color-widget:#3f3525;
@@ -104,8 +109,7 @@ background: radial-gradient(circle, rgba(255,255,255, 0.4), transparent);
 --alpha-fill-off: 0.4;
 --alpha-fill-on: 1;
 --alpha-stroke: 1;
---color-text: #fee8a0;	
-}
+--color-text: #fee8a0;	}
 
 .label2  {
 --color-widget:#bf7921;
@@ -113,69 +117,31 @@ background: radial-gradient(circle, rgba(255,255,255, 0.4), transparent);
 --alpha-fill-off: 0.3;
 --alpha-fill-on: 1;
 --alpha-stroke: 1;
---color-text: #fee8a0;	
-}
+--color-text: #fee8a0;	}
 
-.label3  {
---color-widget:#3f3525;
+.label_info  {
+--color-widget:#000000;
+--alpha-fill-off: 0;
+--color-text: #dfe1c1;
+--color-background: #000000;
+--scrollbar-size:12px !important;
+font-size:12px;
+line-height: 125%;
+font-weight: normal;
+text-wrap: wrap;	}
+
+.encoder1  {
+--color-widget:#bf7921;
+--color-fill: #e5ca04;
 --color-stroke: #614f3e;
---color-fill: #766e64;
---alpha-fill-off: 0.4;
---alpha-fill-on: 0.8;
---alpha-stroke: 0.7;
---color-text: #c5c8ff;
---color-text-on: #fcfcae;	
-}
-		
-.enc1 {
-border: 3;
---alpha-fill-on: 1;
---alpha-fill-off: 0.5;
---alpha-stroke: 1;
---color-text: #e4eec9;
---color-stroke: #dfefff;
---color-widget: #ffad46;
---color-fill: #e28817;
---line-width: 5px;
-}
+--color-knob: #ffd7a3;
+--alpha-fill-off: 0.1;
+--alpha-fill-on: 0.5;
+--alpha-stroke: 0.5;
+--color-text: #fee8a0;
+--line-width: 3px;	}
 
-.enc2 {
-border: none;
---alpha-fill-on: 1;
---alpha-fill-off: 0.5;
---alpha-stroke: 1;
---color-text: #fff;
---color-stroke: #f4f9ff;
---color-widget: #a3d9ff;
---color-fill: #3f8abf;
---line-width: 5px;
-}
-
-.enc3 {
-border: none;
---alpha-fill-on: 1;
---alpha-fill-off: 0.5;
---alpha-stroke: 1;
---color-text: #fff;
---color-stroke: #f4f9ff;
---color-widget: #00ff5e;
---color-fill: #00b142;
---line-width: 5px;
-}
-
-.rotary_btn{
-	position: absolute;
-	opacity: 1.0;
-	border: none;
-}
-
-.rotary{
-	position: absolute;
-	opacity: 1.0;
-	border: none;
-}
-
-.encoder {
+.encoder2 {
 border: none;
 --alpha-fill-on: none;
 --alpha-fill-off: none;
@@ -187,7 +153,7 @@ border: none;
 	
 }
 
-.label-input{
+.label_input{
 	font-family: 'LCD-7';
 	position: absolute;
 	opacity: 1.0;
@@ -195,7 +161,7 @@ border: none;
 position: absolute;
 }
 
-.label{
+.label_next{
 	font-family: 'Roboto';
 	position: absolute;
 	background-color: #2b2627;
@@ -206,15 +172,3 @@ text-align: end;
 	border: none;
 position: absolute;
 }	
-
-.button {
-border: none;
---alpha-fill-on: none;
-//--alpha-fill-off: none;
-//--alpha-stroke: none;
---color-text: none;
---color-widget: none;
---color-fill: none;
---line-width: none;
-	
-}

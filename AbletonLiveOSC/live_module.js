@@ -70,10 +70,10 @@ module.exports = {
         if (address == '/live/track/get/name') {
          	var name = data.args[1].value         
 			receive('/seltr_labl', name ) }
-			
+	/*		
 		if (address == '/live/view/get/selected_track') {
         	var seltr = data.args[0].value }
-        	
+   */     	
         if (address == '/live/song/get/is_playing') {
       		var is = data.args[0].value 
       		if(is == true){
@@ -129,5 +129,6 @@ module.exports = {
         // this will be executed before the custom module is reloaded
         // it is called for all modules, including other loaded modules
     },
+
 
 }

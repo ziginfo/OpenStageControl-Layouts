@@ -67,13 +67,15 @@ module.exports = {
         if (address == '/live/clip/get/name') {
           	address = '/live/clip/fire'}
           	
+/*
         if (address == '/live/track/get/name') {
          	var name = data.args[1].value         
 			receive('/seltr_labl', name ) }
-	/*		
+*/
+			
 		if (address == '/live/view/get/selected_track') {
         	var seltr = data.args[0].value }
-   */     	
+        	
         if (address == '/live/song/get/is_playing') {
       		var is = data.args[0].value 
       		if(is == true){
@@ -89,6 +91,13 @@ module.exports = {
         	receive('/recstat', 1 )}
         	if(is == false){
         	receive('/recstat', 0.5)}	}
+        	
+        if (address == '/live/song/get/loop') {
+      		var is = data.args[0].value 
+      		if(is == true){
+        	receive('loopstat', 0.6 )}
+        	if(is == false){
+        	receive('/loopstat', 0.4)}	}
         	
 
           	
@@ -129,6 +138,5 @@ module.exports = {
         // this will be executed before the custom module is reloaded
         // it is called for all modules, including other loaded modules
     },
-
 
 }

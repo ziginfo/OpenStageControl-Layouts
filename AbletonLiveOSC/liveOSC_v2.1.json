@@ -1107,7 +1107,7 @@
         "value": "",
         "default": "",
         "linkId": "",
-        "address": null,
+        "address": "auto",
         "preArgs": "",
         "typeTags": "",
         "decimals": 2,

@@ -12,7 +12,9 @@ This OpenStageControl Layout includes also a virtual Launchpad which communicate
 See also the "pics" images for details.
 
 ---
-#### The actual Version of my layout is  v2.3   
+#### The actual Version of my layout is  v2.4     
+Just added a Tab for Device-Parameters !   
+And I integrated now all CSS-Style-Rules directly into the template. So it should not more be necessary to load an external CSS-File.
 Added Color-Feedback and some other features...   
 Added two new Tabs for Keyboard and DrumPad and some new Feedback-Features for Clips and Scenes ...     
 But it is still "work-in-progress" and I'll try to get it better and richer in the future... some features are still missing or "in work" !  

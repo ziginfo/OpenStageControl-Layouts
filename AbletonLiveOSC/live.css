@@ -57,6 +57,11 @@ background-color: #1d1b24;}
 .transparent {
 background:transparent;}
 
+.line {
+font-size:13px;
+line-height: 105%;
+font-weight: normal;}
+
 .transport-btns .button-container {
 --alpha-stroke:1;
 --alpha-fill-off: 0;
@@ -74,7 +79,24 @@ background:transparent;}
 .fad1 {--color-widget:#aaa377;}
 .fad2 {--color-widget:#dbd7bc;}
 .fad3 {--color-widget:#7891fa;}
+.paramfad {--color-widget:#e08301;
+		--alpha-fill-on: 0.45;
+		--alpha-fill-off: 0.07;
+		--alpha-stroke: 0.3;
+		--border-radius: 7;
+		--knob-size: 14;
+		padding: 5px !important;}
 
+.parambutt {--color-widget:#938c85;
+		--color-text: #8bbe70;
+		--color-text-on: #ecff6a;
+		--alpha-fill-on: 0.5;
+		--alpha-fill-off: 0.1;
+		--alpha-stroke: 0.3 !important;;
+		--border-radius: 10;
+		--knob-size: 12;
+		padding: 5px !important;}
+		
 .butt1 {--color-widget:#c09c2a;
 		--color-text-on: #0f0f0f;}
 .butt2 {--color-widget:#298bff;
@@ -87,8 +109,10 @@ background:transparent;}
 		--color-widget:#bb9415;
 		--color-stroke: #4e6e55;
 		--alpha-fill-off: 0.4;
-		--alpha-stroke:0.6!important;
-		--border-radius: 3;}
+		--alpha-stroke:0.6;
+		--border-radius: 3;
+		--line-width: 1;
+		font-weight:normal;}
 .butt5 {--color-widget:#504646;}
 
 .gradient { 
@@ -128,7 +152,10 @@ background: radial-gradient(circle, rgba(255,255,255, 0.4), transparent);
 font-size:12px;
 line-height: 125%;
 font-weight: normal;
-text-wrap: wrap;	}
+// max-width: 300px;
+// text-wrap: wrap;
+// word-wrap: normal;
+// word-break: keep-all;	}
 
 .encoder1  {
 --color-widget:#bf7921;

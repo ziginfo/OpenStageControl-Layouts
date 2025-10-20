@@ -44,12 +44,15 @@ module.exports = {
     	 // receive incoming osc messages in the console
 
 // this will show incoming-messages-logs in the console =>> 
-//    receive('/LOG', `MSG IN: ${data.address}, ${data.args.map(a=>a.value).join(', ')}`)
+    receive('/LOG', `MSG IN: ${data.address}, ${data.args.map(a=>a.value).join(', ')}`)
     	
         // Filter incoming osc messages
 
         var {address, args, host, port} = data
-
+          	
+        if (address == '/live/device/get/parameter/value') {
+          	address = '/live/device/set/parameter/value' }
+          	 	
         if (address == '/live/track/get/volume') {
           	address = '/live/track/set/volume' }
           	
@@ -136,8 +139,8 @@ module.exports = {
       		var val = data.args[2].value
       		if(val==true){
       		 send (data.host,data.port,'/live/clip/get/is_playing',tra,clip)}
-      		}        
-          
+      		}
+          	
         return {address, args, host, port}
 
           
@@ -160,7 +163,7 @@ module.exports = {
     	// Filter outgoing osc messages
 
 // this will show outgoing-messages-logs in the console =>> 
-//    receive('/LOG', `MSG OUT: ${data.address}, ${data.args.map(a=>a.value).join(', ')}`)
+    receive('/LOG', `MSG OUT: ${data.address}, ${data.args.map(a=>a.value).join(', ')}`)
     	
         // Filter outgoing osc messages
 

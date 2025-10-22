@@ -13,7 +13,7 @@ See also the "pics" images for details.
 
 ---
 #### The actual Version of my layout is  v2.4     
-Just added a Tab for Device-Parameters !   
+Just added a Tab and a Popup-Window for Device-Parameters !   
 And I integrated now all CSS-Style-Rules directly into the template. So it should not more be necessary to load an external CSS-File.
 Added Color-Feedback and some other features...   
 Added two new Tabs for Keyboard and DrumPad and some new Feedback-Features for Clips and Scenes ...     

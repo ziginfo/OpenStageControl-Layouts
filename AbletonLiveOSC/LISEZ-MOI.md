@@ -13,7 +13,7 @@ Voir également les images (pics) pour plus de détails.
 
 ---
 #### La version actuelle de mon layout est la v2.4     
-Je viens d'ajouter un onglet pour les paramètres des Devices (plugins et instruments et macros etc) !    
+Je viens d'ajouter un onglet et une "pop-up" pour les paramètres des Devices (plugins et instruments et macros etc) !    
 Et j'ai désormais intégré toutes les règles de style CSS directement dans le layout. Il ne devrait donc plus être nécessaire de charger un fichier CSS externe.   
 Ajout du feedback de couleur et de quelques autres fonctionnalités…    
 Ajout de deux nouveaux onglets pour le clavier et le drumpad, ainsi que de nouvelles fonctionnalités de feedback pour les clips et les scènes.   

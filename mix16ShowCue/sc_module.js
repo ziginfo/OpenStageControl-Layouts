@@ -12,9 +12,13 @@ const cue_numbs=[]
 const cue_vols=[]
 const cue_stats=[]
 const cue_notes=[]
+const cue_colors=[]
+const cue_times=[]
 const sb_ids=[]
 const sb_names=[] 
-
+const sb_times=[]
+const sb_colors=[]
+maxid=0; 
 
 module.exports = {
 
@@ -36,67 +40,84 @@ module.exports = {
 
     oscInFilter:function(data){
         // Filter incoming osc messages
+        
+// this will show incoming-messages-logs in the console =>> 
+//    receive('/LOG', `MSG IN: ${data.address}, ${data.args.map(a=>a.value).join(', ')}`)
+
         var {address, args, host, port} = data
+        
+        if (data.address == '/mix16showcue/cues') { 
+        	 maxid = args[0].value
+        	receive('/cuemax', maxid)
+//            receive('/cuemax_var', maxid)
+//            receive('/cues_count', maxid)
+        }
+        
+        if (data.address == '/mix16showcue/sidebarcues') { 
+        	 sbmaxid = args[0].value
+        	receive('/sb_max', sbmaxid)
+            receive('/sb_max_var', sbmaxid)
+            receive('/sb_count', sbmaxid)
+        }
 
         if (data.address == '/mix16showcue/cue') {            
-          		            	
+ /*         		            	
             	cue_ids.push(data.args[0].value)             	
          		cue_numbs.push(data.args[1].value)                       	
            		cue_names.push(data.args[2].value)
+           		cue_stats.push(data.args[4].value)
            		cue_notes.push(data.args[5].value)
-           	
-           	var maxid = Math.max.apply(Math, cue_ids)
-           		
-
-            receive('/cuemax', maxid)
-            receive('/cuemax_var', maxid)
-                        
+           		cue_times.push(data.args[6])
+           		cue_colors.push(data.args[7].value)
+*/           		                        
+            var cue_id = data.args[0].value
+            var cue_numb = data.args[1].value
+            var cue_name = data.args[2].value
             var cue_vol = data.args[3].value
-            var cue_play = data.args[4].value       
-       		
+            var cue_play = data.args[4].value
+            var cue_note = data.args[5].value
+            var cue_time = data.args[6].value
+            var cue_color = data.args[7].value              		
 //		 insert Cue-names and -numbers              
          	for (n=0; n<maxid; n++){
-         	no=n+1
-//         	receive('/cueid_'+no, no)
-         	receive('/cueno_'+no, cue_numbs[n])
-         	receive('/cuename_'+no, cue_names[n])
-         	receive('/cuelabel_'+no, cue_names[n])
-         	receive('/cuenote_'+no, cue_notes[n])
-         	receive('/cuetrig_'+no, cue_names[n])
-         	receive('/cuetrigvar_'+no, cue_numbs[n])
-         	receive('/cuetrigname_'+no, cue_names[n])
+         		no=n+1
+         	if(cue_id===no){
+//         		receive('/cueid_'+no, no)
+         		receive('/cueno_'+no, cue_numb)
+        		receive('/cuename_'+no, cue_name)
+       	 		receive('/cuecol_var_'+no, cue_color)
+         		receive('/cuetime_'+no, cue_time)
+         		receive('/cuenote_'+no, cue_note)
+         		receive('/cuetrig_'+no, cue_name)
+         		receive('/cuetrigvar_'+no, data.args[1])
+         		receive('/cueplayvar_'+no, cue_play)
+         		receive('/playtext_'+no, cue_play)
+         		receive('/cuetrigname_'+no, cue_numb+' :: '+cue_name)
+         		receive('/cuetrignote_'+no, cue_note)  }         	
          	}                                               
          }
                         
-   			if (data.address == '/mix16showcue/sidebarcue') {                      	          	         		
+   			if (data.address == '/mix16showcue/sidebarcue') { 
+/*   			                     	          	         		
           		sb_ids.push(data.args[0].value)             	         		                       	
-          		sb_names.push(data.args[1])
-          		var sbmaxid = Math.max.apply(Math, sb_ids)          		
-          		receive('/sb_max', sbmaxid)
-            	receive('/sb_max_var', sbmaxid)
-            	
-            	receive('/text_1', sb_names)
-          	
-          	//		 insert Cue-names and -numbers              
+          		sb_names.push(data.args[1].value) 
+          		sb_times.push(data.args[5].value)             	         		                       	
+          		sb_colors.push(data.args[6].value)
+*/  
+			var sbid = data.args[0].value
+            var sbname = data.args[1].value
+            var sbtime = data.args[5].value
+            var sbcol = data.args[6].value     		          	
+//		 insert Cue-names and -numbers              
           		for (i=0; i<sbmaxid; i++){
          	var o=i+1
-         	receive('/sbno_'+o, sb_ids[i])
-         	receive('/sbname_'+o,sb_names[i])
+         	if(sbid===o){
+         	receive('/sbno_'+o, sbid)
+         	receive('/sbname_'+o,sbname)
+         	receive('/sbcuecol_var_'+o, sbcol)	}
          	}                     
           }
           
-          
-/*          
-          	if (data.address == '/mix16showcue/playingcue/number') {                      	          	         		             	         		                       	
-          		var playno = data.args[0].value } 
-          		        		         		        		
-          		for (l=1; l<60; l++)
-          		if (playno==l)
-            	{receive('/cueled_'+l, 1 )	}
-            	else
-            	{receive('/cueled_'+l, 0 )}            	         	                
-          
-*/
 
             // empty return = bypass original message 
             //  return
@@ -113,6 +134,9 @@ module.exports = {
   
     oscOutFilter:function(data){
         // Filter outgoing osc messages
+        
+// this will show outgoing-messages-logs in the console =>> 
+//    receive('/LOG', `MSG OUT: ${data.address}, ${data.args.map(a=>a.value).join(', ')}`)
 
         var {address, args, host, port, clientId} = data
         

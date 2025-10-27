@@ -6,18 +6,7 @@
 // etc
 
 const cueAddresses = ['/mix16showcue/cue', '/mix16showcue/nextcue/name', '/mix16showcue/playingcue/name'];
-const cue_names=[]
-const cue_ids=[]
-const cue_numbs=[]
-const cue_vols=[]
-const cue_stats=[]
-const cue_notes=[]
-const cue_colors=[]
-const cue_times=[]
-const sb_ids=[]
-const sb_names=[] 
-const sb_times=[]
-const sb_colors=[]
+
 maxid=0; 
 
 module.exports = {
@@ -61,15 +50,7 @@ module.exports = {
         }
 
         if (data.address == '/mix16showcue/cue') {            
- /*         		            	
-            	cue_ids.push(data.args[0].value)             	
-         		cue_numbs.push(data.args[1].value)                       	
-           		cue_names.push(data.args[2].value)
-           		cue_stats.push(data.args[4].value)
-           		cue_notes.push(data.args[5].value)
-           		cue_times.push(data.args[6])
-           		cue_colors.push(data.args[7].value)
-*/           		                        
+         		                        
             var cue_id = data.args[0].value
             var cue_numb = data.args[1].value
             var cue_name = data.args[2].value
@@ -98,12 +79,7 @@ module.exports = {
          }
                         
    			if (data.address == '/mix16showcue/sidebarcue') { 
-/*   			                     	          	         		
-          		sb_ids.push(data.args[0].value)             	         		                       	
-          		sb_names.push(data.args[1].value) 
-          		sb_times.push(data.args[5].value)             	         		                       	
-          		sb_colors.push(data.args[6].value)
-*/  
+ 
 			var sbid = data.args[0].value
             var sbname = data.args[1].value
             var sbtime = data.args[5].value
@@ -140,60 +116,7 @@ module.exports = {
 
         var {address, args, host, port, clientId} = data
         
-        if (data.address == '/clearall') {
-        	var count = data.args[0].value
-				count = parseInt(count)
-			
-			receive('/notes_nextcue', "")    
-			
-//		 clear Cue-names and -numbers				        
-        	for (n=0; n<count; n++){
-         	no=n+1
-         	receive('/cueno_'+no, "")
-         	receive('/sbno_'+no,  '')
-         	receive('/cuename_'+no, "")
-         	receive('/sbname_'+no, "")
-         	receive('/cuelabel_'+no, "")
-         	receive('/cuenote_'+no, "")
-         	receive('/cuetrig_'+no, "")
-         	receive('/cuetrigvar_'+no, "")
-         	receive('/cuetrigname_'+no, "")
-         	}
-				while( cue_numbs.length > 0){
-				cue_numbs.pop()		}
-				while( cue_names.length > 0){
-				cue_names.pop()		}
-				while( cue_notes.length > 0){
-				cue_notes.pop()		}
-				while( sb_names.length > 0){
-				sb_names.pop()		}
-				while( sb_ids.length > 0){
-				sb_ids.pop()		}								
-         	maxid = 0
-         	receive('/cuemax', maxid)
-            receive('/cuemax_var', maxid)
-                 	  
-         } 
-         
-         if (data.address == '/clearsb') {
-        	var countsb = data.args[0].value
-				countsb = parseInt(countsb)
-
-//		 clear Sb-names and -numbers				        
-        	for (n=0; n<countsb; n++){
-         	no=n+1
-         	receive('/sbname_'+no, "")
-         	receive('/cuelabel_'+no, "")
-         	}
-				while( sb_names.length > 0){
-				sb_names.pop()		}
-				while( sb_ids.length > 0){
-				sb_ids.pop()		}								
-         	sbmax = 0
-         	receive('/sb_max', sbmax)
-            receive('/sb_max_var', sbmax)         	  
-         }   
-             
+          
         // return data if you want the message to be and sent
         return {address, args, host, port}
     },
